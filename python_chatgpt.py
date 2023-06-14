@@ -15,13 +15,13 @@ api_key = os.getenv("OPENAI_API_KEY")
 ## providing meta-data for POST request
 request_headers = {
                     "Content-Type": "application/json",
-                    "Authorization": "Bearer " + api_key ## or with $ sign?
+                    "Authorization": "Bearer " + api_key 
                     }
 
 
 ## providing prompt specifications
 request_data = {"model": "text-ada-001",
-                "prompt": f"Write a Python script to {args.prompt}. Provide only code, no text.", ## what if I want commented code?
+                "prompt": f"Write a Python script to {args.prompt}. Provide only code, no text.", 
                 "max_tokens": 100,
                 "temperature": 0.5,
                 #"top_p": 1,
